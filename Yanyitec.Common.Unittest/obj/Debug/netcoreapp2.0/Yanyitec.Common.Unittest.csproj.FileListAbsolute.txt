@@ -1,0 +1,17 @@
+Y:\Common\Yanyitec.Common.Unittest\obj\Debug\netcoreapp2.0\Yanyitec.Common.Unittest.csprojAssemblyReference.cache
+Y:\Common\Yanyitec.Common.Unittest\obj\Debug\netcoreapp2.0\Yanyitec.Common.Unittest.csproj.CoreCompileInputs.cache
+Y:\Common\Yanyitec.Common.Unittest\obj\Debug\netcoreapp2.0\Yanyitec.Common.Unittest.AssemblyInfoInputs.cache
+Y:\Common\Yanyitec.Common.Unittest\obj\Debug\netcoreapp2.0\Yanyitec.Common.Unittest.AssemblyInfo.cs
+Y:\Common\Yanyitec.Common.Unittest\bin\Debug\netcoreapp2.0\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+Y:\Common\Yanyitec.Common.Unittest\bin\Debug\netcoreapp2.0\xunit.runner.reporters.netcoreapp10.dll
+Y:\Common\Yanyitec.Common.Unittest\bin\Debug\netcoreapp2.0\xunit.runner.utility.netcoreapp10.dll
+Y:\Common\Yanyitec.Common.Unittest\bin\Debug\netcoreapp2.0\Yanyitec.Common.Unittest.deps.json
+Y:\Common\Yanyitec.Common.Unittest\bin\Debug\netcoreapp2.0\Yanyitec.Common.Unittest.runtimeconfig.json
+Y:\Common\Yanyitec.Common.Unittest\bin\Debug\netcoreapp2.0\Yanyitec.Common.Unittest.runtimeconfig.dev.json
+Y:\Common\Yanyitec.Common.Unittest\bin\Debug\netcoreapp2.0\Yanyitec.Common.Unittest.dll
+Y:\Common\Yanyitec.Common.Unittest\bin\Debug\netcoreapp2.0\Yanyitec.Common.Unittest.pdb
+Y:\Common\Yanyitec.Common.Unittest\bin\Debug\netcoreapp2.0\Yanyitec.Common.dll
+Y:\Common\Yanyitec.Common.Unittest\bin\Debug\netcoreapp2.0\Yanyitec.Common.pdb
+Y:\Common\Yanyitec.Common.Unittest\obj\Debug\netcoreapp2.0\Yanyitec.Common.Unittest.csproj.CopyComplete
+Y:\Common\Yanyitec.Common.Unittest\obj\Debug\netcoreapp2.0\Yanyitec.Common.Unittest.dll
+Y:\Common\Yanyitec.Common.Unittest\obj\Debug\netcoreapp2.0\Yanyitec.Common.Unittest.pdb

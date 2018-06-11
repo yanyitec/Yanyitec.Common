@@ -1,0 +1,17 @@
+Y:\Accessor\Yanyitec.Accessor.Unittest\bin\Debug\netcoreapp2.0\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+Y:\Accessor\Yanyitec.Accessor.Unittest\bin\Debug\netcoreapp2.0\xunit.runner.reporters.netcoreapp10.dll
+Y:\Accessor\Yanyitec.Accessor.Unittest\bin\Debug\netcoreapp2.0\xunit.runner.utility.netcoreapp10.dll
+Y:\Accessor\Yanyitec.Accessor.Unittest\bin\Debug\netcoreapp2.0\Yanyitec.Accessor.Unittest.deps.json
+Y:\Accessor\Yanyitec.Accessor.Unittest\bin\Debug\netcoreapp2.0\Yanyitec.Accessor.Unittest.runtimeconfig.json
+Y:\Accessor\Yanyitec.Accessor.Unittest\bin\Debug\netcoreapp2.0\Yanyitec.Accessor.Unittest.runtimeconfig.dev.json
+Y:\Accessor\Yanyitec.Accessor.Unittest\bin\Debug\netcoreapp2.0\Yanyitec.Accessor.Unittest.dll
+Y:\Accessor\Yanyitec.Accessor.Unittest\bin\Debug\netcoreapp2.0\Yanyitec.Accessor.Unittest.pdb
+Y:\Accessor\Yanyitec.Accessor.Unittest\bin\Debug\netcoreapp2.0\Yanyitec.Accessor.dll
+Y:\Accessor\Yanyitec.Accessor.Unittest\bin\Debug\netcoreapp2.0\Yanyitec.Accessor.pdb
+Y:\Accessor\Yanyitec.Accessor.Unittest\obj\Debug\netcoreapp2.0\Yanyitec.Accessor.Unittest.csprojAssemblyReference.cache
+Y:\Accessor\Yanyitec.Accessor.Unittest\obj\Debug\netcoreapp2.0\Yanyitec.Accessor.Unittest.csproj.CoreCompileInputs.cache
+Y:\Accessor\Yanyitec.Accessor.Unittest\obj\Debug\netcoreapp2.0\Yanyitec.Accessor.Unittest.AssemblyInfoInputs.cache
+Y:\Accessor\Yanyitec.Accessor.Unittest\obj\Debug\netcoreapp2.0\Yanyitec.Accessor.Unittest.AssemblyInfo.cs
+Y:\Accessor\Yanyitec.Accessor.Unittest\obj\Debug\netcoreapp2.0\Yanyitec.Accessor.Unittest.csproj.CopyComplete
+Y:\Accessor\Yanyitec.Accessor.Unittest\obj\Debug\netcoreapp2.0\Yanyitec.Accessor.Unittest.dll
+Y:\Accessor\Yanyitec.Accessor.Unittest\obj\Debug\netcoreapp2.0\Yanyitec.Accessor.Unittest.pdb

@@ -38,7 +38,7 @@ namespace Yanyitec.Accessor
             }
         }
 
-        public IEnumerable<string> Fieldnames {
+        public IEnumerable<string> PropertyNames {
             get {
                 if (this._Props == null)
                 {

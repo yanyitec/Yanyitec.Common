@@ -21,7 +21,7 @@ namespace Yanyitec.Unittest
                     //context.DbSet.Attach(e);
                     context.DbSet.Remove(e);
                 }
-                context.SaveChanges();
+                context.DbContext.SaveChanges();
             }
 
             using (var context = new BlogRepository())

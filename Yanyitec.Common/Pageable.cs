@@ -19,12 +19,15 @@ namespace Yanyitec
 
         public uint PageSize { get; set; }
 
-        
-
-       
 
 
 
-       
+
+        static public implicit operator Pageable<T>(Expression<Func<T,bool>> expr)
+        {
+            return new Pageable<T>(expr);
+        }
+
+
     }
 }

@@ -67,16 +67,18 @@ namespace Yanyitec.Runtime
         [ProtoMember(8)]
         public string Token { get; set; }
         [ProtoMember(9)]
+        public string ClientIp { get; set; }
+        [ProtoMember(10)]
         public IRuntimePermissions Permissions
         {
             get;set;
         }
-        [ProtoMember(10)]
+        [ProtoMember(11)]
         public IUser Factor
         {
             get; set;
         }
-        [ProtoMember(11)]
+        [ProtoMember(12)]
         public IDictionary<string, string> Data { get;set; }
         #endregion
     }

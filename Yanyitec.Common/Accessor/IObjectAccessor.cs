@@ -11,8 +11,12 @@ namespace Yanyitec.Accessor
         
         Type ObjectType { get;  }
 
+        IObjectAccessorFactory ObjectAccessorFactory { get; }
+
         //Func<MemberInfo, IObjectAccessor, IMemberAccessor> MemberAccessorFactory { get; }
 
         IPropertyAccessor this[string memberName] { get; }
+
+        IEnumerable<string> PropertyNames { get; }
     }
 }

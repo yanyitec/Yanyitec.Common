@@ -14,21 +14,21 @@ namespace Yanyitec.Repo
         /// <param name="accountId"></param>
         /// <param name="storagePartition"></param>
         /// <returns></returns>
-        Task<TEntity> GetByIdAsync(TID id,string accessableFields=null ,string storagePartition = null);
+        Task<TEntity> GetByIdAsync(TID id,IRepoContext context = null);
         /// <summary>
         /// 新添实体
         /// </summary>
         /// <param name="entity"></param>
         /// <param name="storagePartition"></param>
         /// <returns></returns>
-        Task<TEntity> CreateAsync(TEntity entity, string accessableFields = null, string storagePartition= null);
+        Task<TEntity> CreateAsync(TEntity entity , IRepoContext context = null);
         /// <summary>
         /// 修改实体数据
         /// </summary>
         /// <param name="entity"></param>
         /// <param name="storagePartition"></param>
         /// <returns></returns>
-        Task<TEntity> ModifyAsync(TEntity entity, string accessableFields = null, string storagePartition = null);
+        Task<TEntity> ModifyAsync(TEntity entity, IRepoContext context = null);
         /// <summary>
         /// 根据条件，获取列表
         /// 也可用于分页
@@ -37,21 +37,21 @@ namespace Yanyitec.Repo
         /// <param name="storagePartition"></param>
         /// <returns></returns>
 
-        Task<Pageable<TEntity>> ListAsync(Pageable<TEntity> pageable, string accessableFields = null, string storagePartition = null);
+        Task<Pageable<TEntity>> ListAsync(Pageable<TEntity> pageable, IRepoContext context = null);
         /// <summary>
         /// 根据Id删除实体数据
         /// </summary>
         /// <param name="id"></param>
         /// <param name="storagePartition"></param>
         /// <returns></returns>
-        Task<TEntity> DeleteByIdAsync(TID id, string storagePartition = null);
+        Task<TEntity> DeleteByIdAsync(TID id, IRepoContext context = null);
         /// <summary>
         /// 删除实体数据
         /// </summary>
         /// <param name="entity"></param>
         /// <param name="storagePartition"></param>
         /// <returns></returns>
-        Task<TEntity> DeleteAsync(TEntity entity, string storagePartition = null);
+        Task<TEntity> DeleteAsync(TEntity entity, IRepoContext context = null);
 
     }
 }

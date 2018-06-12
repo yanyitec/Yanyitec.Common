@@ -6,7 +6,8 @@ namespace Yanyitec.Runtime
 {
     public interface IRuntimeUser :IUser
     {
-        string Token { get; set; }
+        string Token { get;  }
+        string ClientIp { get;  }
         IRuntimePermissions Permissions { get; }
         /// <summary>
         /// 代理人

@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Yanyitec.Accessor.Unittest
+namespace Yanyitec.Unittest.Entities
 {
-    public class TestObjectType
+    public class User
     {
         public int Id { get; set; }
         public int? Age { get; set; }

@@ -1,0 +1,12 @@
+Y:\Common\Yanyitec.Common.Implement\bin\Debug\netcoreapp2.0\Yanyitec.Common.Implement.deps.json
+Y:\Common\Yanyitec.Common.Implement\bin\Debug\netcoreapp2.0\Yanyitec.Common.Implement.dll
+Y:\Common\Yanyitec.Common.Implement\bin\Debug\netcoreapp2.0\Yanyitec.Common.Implement.pdb
+Y:\Common\Yanyitec.Common.Implement\obj\Debug\netcoreapp2.0\Yanyitec.Common.Implement.csproj.CoreCompileInputs.cache
+Y:\Common\Yanyitec.Common.Implement\obj\Debug\netcoreapp2.0\Yanyitec.Common.Implement.AssemblyInfoInputs.cache
+Y:\Common\Yanyitec.Common.Implement\obj\Debug\netcoreapp2.0\Yanyitec.Common.Implement.AssemblyInfo.cs
+Y:\Common\Yanyitec.Common.Implement\obj\Debug\netcoreapp2.0\Yanyitec.Common.Implement.dll
+Y:\Common\Yanyitec.Common.Implement\obj\Debug\netcoreapp2.0\Yanyitec.Common.Implement.pdb
+Y:\Common\Yanyitec.Common.Implement\bin\Debug\netcoreapp2.0\Yanyitec.Common.dll
+Y:\Common\Yanyitec.Common.Implement\bin\Debug\netcoreapp2.0\Yanyitec.Common.pdb
+Y:\Common\Yanyitec.Common.Implement\obj\Debug\netcoreapp2.0\Yanyitec.Common.Implement.csprojAssemblyReference.cache
+Y:\Common\Yanyitec.Common.Implement\obj\Debug\netcoreapp2.0\Yanyitec.Common.Implement.csproj.CopyComplete

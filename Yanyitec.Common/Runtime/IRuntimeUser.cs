@@ -13,6 +13,6 @@ namespace Yanyitec.Runtime
         /// </summary>
         IUser Factor { get; }
 
-        IDictionary<string, object> Data { get; }
+        IDictionary<string, string> Data { get; }
     }
 }

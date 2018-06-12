@@ -15,3 +15,6 @@ Y:\Common\Yanyitec.Common.Unittest\bin\Debug\netcoreapp2.0\Yanyitec.Common.pdb
 Y:\Common\Yanyitec.Common.Unittest\obj\Debug\netcoreapp2.0\Yanyitec.Common.Unittest.csproj.CopyComplete
 Y:\Common\Yanyitec.Common.Unittest\obj\Debug\netcoreapp2.0\Yanyitec.Common.Unittest.dll
 Y:\Common\Yanyitec.Common.Unittest\obj\Debug\netcoreapp2.0\Yanyitec.Common.Unittest.pdb
+Y:\Common\Yanyitec.Common.Unittest\bin\Debug\netcoreapp2.0\Yanyitec.Common.Implement.dll
+Y:\Common\Yanyitec.Common.Unittest\bin\Debug\netcoreapp2.0\Yanyitec.Common.Implement.pdb
+Y:\Common\Yanyitec.Common.Unittest\bin\Debug\netcoreapp2.0\db\blog.db

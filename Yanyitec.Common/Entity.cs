@@ -4,11 +4,9 @@ using System.Text;
 
 namespace Yanyitec
 {
-    public class Entity : IEntity
+    public class Entity :Entity<Guid>, IEntity
     {
-        public Guid Id { get; protected set; }
-
-        public void SetAssignedId(Guid id) { this.Id = id; }
+        
         
         
         

@@ -6,7 +6,9 @@ namespace Yanyitec.Repo
 {
     public interface IRepository : IDisposable
     {
-        ITransaction BeginTran();
-        bool IsInTransaction { get; }
+        //Task<ITransaction> BeginTranAsync();
+        //bool IsInTransaction { get; }
+        
+        
     }
 }

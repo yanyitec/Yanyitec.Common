@@ -9,7 +9,7 @@ namespace Yanyitec.Runtime
         Guid Id { get; }
         string ActionId { get; }
         AppliedScopes AppliedScope { get; }
-        string[] AllowedFields { get; }
+        string AllowedFields { get; }
         IDictionary<string, string> Data { get; }
     }
 }

@@ -2,11 +2,8 @@
 
 namespace Yanyitec
 {
-    public interface IEntity
+    public interface IEntity:IEntity<Guid>
     {
-        Guid Id { get; }
-
-        void SetAssignedId(Guid id);
         
         
     }

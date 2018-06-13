@@ -2,11 +2,11 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
-using Yanyitec.Accessor;
+using Yanyitec.Reflection;
 
 namespace Yanyitec.Validation
 {
-    public interface IValidatableObjectAccessor : IObjectAccessor
+    public interface IValidatableClass : IClass
     {
         JObject ValidationSettings { get; }
 

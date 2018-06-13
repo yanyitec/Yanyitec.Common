@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Yanyitec.Accessor
+namespace Yanyitec.Reflection
 {
-    public interface IPropertyAccessor<T>:IPropertyAccessor
+    public interface IProperty<T>:IProperty
         where T:class
     {
         new Func<T, bool, object> GetValue { get; }

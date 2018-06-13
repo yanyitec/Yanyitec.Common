@@ -4,12 +4,12 @@ using System.Linq.Expressions;
 using System.Reflection;
 using System.Text;
 
-namespace Yanyitec.Accessor
+namespace Yanyitec.Reflection
 {
-    public class PropertyAccessor: IPropertyAccessor
+    public class Property: IProperty
     {
-        public PropertyAccessor(MemberInfo memberInfo,IObjectAccessor objectAccessor) {
-            this.ObjectAccessor = objectAccessor;
+        public Property(MemberInfo memberInfo,IClass Class) {
+            this.Class = Class;
             this.MemberInfo = memberInfo;
             var valueType = memberInfo.MemberType == MemberTypes.Field ? (memberInfo as FieldInfo).FieldType : (memberInfo as PropertyInfo).PropertyType;
             this.ValueType = valueType;
@@ -43,8 +43,8 @@ namespace Yanyitec.Accessor
             this.SetValue = setterLamda.Compile();
 
         }
-        public IObjectAccessor ObjectAccessor { get; private set; }
-        public IObjectAccessor ItemAccessor { get; private set; }
+        public IClass Class { get; private set; }
+        public IClass ItemAccessor { get; private set; }
         public MemberInfo MemberInfo { get; private set; }
         public string Name { get { return this.MemberInfo.Name; } }
         

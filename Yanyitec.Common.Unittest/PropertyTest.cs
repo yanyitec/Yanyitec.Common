@@ -1,18 +1,18 @@
 using System;
 using Xunit;
 using Yanyitec.Unittest.Entities;
-using Yanyitec.Accessor;
+using Yanyitec.Reflection;
 
 namespace Yanyitec.Unittest
 {
-    public class PropertyAccessorUnittest
+    public class PropertyUnittest
     {
         
         [Fact]
         public void GetSetProp()
         {
             var idProp = typeof(User).GetProperty("Id");
-            var memberAccessor = new PropertyAccessor(idProp,null);
+            var memberAccessor = new Property(idProp,null);
             Assert.False(memberAccessor.IsNullable);
             Assert.Equal(typeof(int), memberAccessor.EntitativeType);
 
@@ -27,7 +27,7 @@ namespace Yanyitec.Unittest
         public void GetSetNullable()
         {
             var idProp = typeof(User).GetProperty("Age");
-            var memberAccessor = new PropertyAccessor(idProp, null);
+            var memberAccessor = new Property(idProp, null);
             Assert.True(memberAccessor.IsNullable);
             Assert.Equal(typeof(int),memberAccessor.EntitativeType);
 

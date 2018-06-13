@@ -2,7 +2,7 @@ using System;
 using System.Linq;
 using Xunit;
 using Yanyitec.Unittest.Entities;
-using Yanyitec.Accessor;
+using Yanyitec.Reflection;
 using System.Collections.Generic;
 
 namespace Yanyitec.Unittest
@@ -41,12 +41,12 @@ namespace Yanyitec.Unittest
                 
                 var entity =await context.GetByIdAsync(ids[0].ToString());
                 Assert.Equal(entity.Id,ids[0].ToString());
-                Assert.Equal(entity.Url, "http://0.test");
+                Assert.Equal("http://0.test",entity.Url);
 
                 entity.Url = "http://x.test";
                 await context.ModifyAsync(entity);
                 entity = await context.GetByIdAsync(entity.Id);
-                Assert.Equal(entity.Url, "http://x.test");
+                Assert.Equal("http://x.test",entity.Url);
 
                 var pageable = new Pageable<Blog>();
                 pageable.AndAlso(p=>p.Url.StartsWith("http://"));
@@ -55,8 +55,8 @@ namespace Yanyitec.Unittest
                 pageable.PageIndex = 2;
 
                 await context.ListAsync(pageable);
-                Assert.Equal(pageable.RecordCount,8);
-                Assert.Equal(pageable.PageCount,3);
+                Assert.Equal(8,pageable.RecordCount);
+                Assert.Equal(3,pageable.PageCount);
                 Assert.Equal("http://4.test",pageable.Items[0].Url);
                 Assert.Equal("http://2.test", pageable.Items[1].Url);
                 Assert.Equal("http://14.test", pageable.Items[2].Url);

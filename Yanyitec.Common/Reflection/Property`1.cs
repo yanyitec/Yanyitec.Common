@@ -4,13 +4,13 @@ using System.Linq.Expressions;
 using System.Reflection;
 using System.Text;
 
-namespace Yanyitec.Accessor
+namespace Yanyitec.Reflection
 {
-    public class PropertyAccessor<T> :PropertyAccessor
+    public class Property<T> :Property
         where T:class
     {
-        public PropertyAccessor(MemberInfo memberInfo, IObjectAccessor<T> objectAccessor)
-            :base(memberInfo,objectAccessor)
+        public Property(MemberInfo memberInfo, IClass<T> Class)
+            :base(memberInfo,Class)
         {
             ParameterExpression objExpr = Expression.Parameter(typeof(T), "obj");
             var extractExpr = Expression.Parameter(typeof(bool), "isExtract");

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Yanyitec.Accessor
+namespace Yanyitec.Reflection
 {
     public class VisitorReader
     {

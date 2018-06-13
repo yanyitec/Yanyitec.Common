@@ -4,25 +4,25 @@ using System.Collections.Generic;
 using System.Reflection;
 using System.Text;
 
-namespace Yanyitec.Accessor
+namespace Yanyitec.Reflection
 {
-    public class ObjectAccessor : IObjectAccessor
+    public class Class : IClass
     {
-        public ObjectAccessor(Type objectType, IObjectAccessorFactory factory) {
+        public Class(Type objectType, IClassFactory factory) {
             this.ObjectType = ObjectType;
-            this.ObjectAccessorFactory = factory;
+            this.ClassFactory = factory;
         }
 
-        public IObjectAccessorFactory ObjectAccessorFactory { get;private set; }
+        public IClassFactory ClassFactory { get;private set; }
 
-        protected virtual IPropertyAccessor CreatePropertyAccessor(MemberInfo memberInfo) {
-            return new PropertyAccessor(memberInfo,this);
+        protected virtual IProperty CreateProperty(MemberInfo memberInfo) {
+            return new Property(memberInfo,this);
         }
         public Type ObjectType { get; private set; }
 
-        protected Dictionary<string, IPropertyAccessor> _Props;
+        protected Dictionary<string, IProperty> _Props;
 
-        public IPropertyAccessor this[string memberName] {
+        public IProperty this[string memberName] {
             get
             {
                 if (_Props == null) {
@@ -32,7 +32,7 @@ namespace Yanyitec.Accessor
                         }
                     }
                 }
-                IPropertyAccessor member = null;
+                IProperty member = null;
                 this._Props.TryGetValue(memberName,out member);
                 return member;
             }
@@ -56,18 +56,18 @@ namespace Yanyitec.Accessor
 
         protected virtual void InitMembers() {
             var members = this.ObjectType.GetMembers();
-            var result = new Dictionary<string, IPropertyAccessor>();
+            var result = new Dictionary<string, IProperty>();
             foreach(MemberInfo member in members) {
                 if (member.MemberType == MemberTypes.Property || member.MemberType == MemberTypes.Field)
                 {
-                    var prop = this.CreatePropertyAccessor(member);
+                    var prop = this.CreateProperty(member);
                     if(prop!=null)result.Add(member.Name, prop);
                 }
             }
             this._Props = result;
         }
 
-        public IEnumerator<IPropertyAccessor> GetEnumerator()
+        public IEnumerator<IProperty> GetEnumerator()
         {
             return this._Props.Values.GetEnumerator();
         }

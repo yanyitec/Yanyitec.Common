@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Yanyitec.Accessor
+namespace Yanyitec.Reflection
 {
-    public interface IPropertyAccessor
+    public interface IProperty
     {
-        IObjectAccessor ObjectAccessor { get; }
+        IClass Class { get; }
 
         bool IsNullable { get;  }
 
@@ -17,7 +17,7 @@ namespace Yanyitec.Accessor
         Func<object,bool,object> GetValue { get; }
         Action<object, object> SetValue { get; }
 
-        IObjectAccessor ItemAccessor { get; }
+        IClass ItemAccessor { get; }
 
 
 

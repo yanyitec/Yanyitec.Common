@@ -58,9 +58,9 @@ namespace Yanyitec.Validation
                 }
                 else {
                     Visitor subVisitor = null;
-                    if (visitor.Subsidaries.TryGetValue(pair.Key, out subVisitor)) {
-                        propAccessor = subVisitor.Property as IValidatableProperty;
-                    }
+                    //if (visitor.Subsidaries.TryGetValue(pair.Key, out subVisitor)) {
+                    //    propAccessor = subVisitor.Property as IValidatableProperty;
+                    //}
                     
 
                 }

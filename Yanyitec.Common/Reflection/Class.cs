@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Reflection;
 using System.Text;
@@ -65,6 +66,18 @@ namespace Yanyitec.Reflection
                 }
             }
             this._Props = result;
+        }
+
+        ConcurrentDictionary<string, Visitor> _Visitors;
+        public Visitor AquireVisitor(string expr) {
+            if (this._Visitors == null) {
+                lock (this) {
+                    if (this._Visitors == null) {
+                        this._Visitors = new ConcurrentDictionary<string, Visitor>();
+                    }
+                }
+            }
+            return this._Visitors.GetOrAdd(expr,(e)=> Visitor.Parse(expr,this));
         }
 
         public IEnumerator<IProperty> GetEnumerator()

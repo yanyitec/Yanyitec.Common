@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Yanyitec.Runtime
+namespace Yanyitec.Auth
 {
 
-    public interface IRuntimeRole
+    public interface IAuthRole
     {
 
         Guid Id { get; set; }
@@ -16,7 +16,7 @@ namespace Yanyitec.Runtime
 
         string DepartmentId { get; set; }
 
-        IRuntimeRole InheritFrom { get; set; }
+        IAuthRole InheritFrom { get; set; }
         
 
     }

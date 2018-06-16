@@ -10,7 +10,7 @@ namespace Yanyitec
         /// 用户唯一全局Id
         /// </summary>
         Guid UserId { get;}
-        Guid UserVersionId { get;  }
+        
 
         /// <summary>
         /// 用户唯一名
@@ -21,7 +21,7 @@ namespace Yanyitec
         /// </summary>
         string DisplayName { get; }
 
-        string ToJSON();
+        string UserInfo { get; }
 
         
     }

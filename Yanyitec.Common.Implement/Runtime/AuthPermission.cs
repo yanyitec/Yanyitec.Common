@@ -5,12 +5,12 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Yanyitec.Runtime
+namespace Yanyitec.Auth
 {
     [ProtoContract]
-    public class RuntimePermission : IRuntimePermission
+    public class AuthPermission : IAuthPermission
     {
-        //public RuntimePermission(Permission perm) {
+        //public AuthPermission(Permission perm) {
         //    this.Id = perm.Id;
         //    this.ActionId = perm.ActionId;
         //    this.Data = JObject.Parse(perm.DataInfo);

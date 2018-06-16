@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using Newtonsoft.Json.Linq;
 
-namespace Yanyitec.Runtime
+namespace Yanyitec.Auth
 {
-    public interface IRuntimePermission
+    public interface IAuthPermission
     {
         Guid Id { get; }
         string ActionId { get; }

@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Yanyitec.Flow.Storage;
 using Yanyitec.Flow.Defination;
-using Yanyitec.Runtime;
+using Yanyitec.Auth;
 
 namespace Yanyitec.Flow
 {
@@ -44,14 +44,14 @@ namespace Yanyitec.Flow
 
         public ActivityStates Status { get; internal set; }
 
-        public abstract Task<ActivityStates> ExecuteAsync(IRuntimeUser dealer);
+        public abstract Task<ActivityStates> ExecuteAsync(IAuthUser dealer);
 
-        protected internal virtual ActivityEntity UpdateEntity(IRuntimeUser dealer) {
+        protected internal virtual ActivityEntity UpdateEntity(IAuthUser dealer) {
             this.Entity.Variables = this.Variables.ToString();
             this.Entity.Outputs = this.Outputs.ToString();
             this.Entity.Status = this.Status;
             this.Entity.DealedBy = dealer.UserId;
-            this.Entity.DealerInfo = dealer.ToJSON();
+            this.Entity.DealerInfo = dealer.UserInfo;
             this.Entity.DealTime = DateTime.Now;
             return this.Entity;
 

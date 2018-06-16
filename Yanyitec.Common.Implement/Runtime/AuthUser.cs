@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using ProtoBuf;
 
-namespace Yanyitec.Runtime
+namespace Yanyitec.Auth
 {
     [ProtoContract]
-    public class RuntimeUser :  IRuntimeUser
+    public class AuthUser :  IAuthUser
     {
         #region IUser/BasUser成员
         /// <summary>
@@ -13,34 +13,21 @@ namespace Yanyitec.Runtime
         /// </summary>
         [ProtoMember(1)]
         public Guid UserId { get; set; }
-        [ProtoMember(2)]
-        public Guid UserVersionId { get; set; }
+        
 
         /// <summary>
         /// 用户唯一名
         /// </summary>
-        [ProtoMember(3)]
+        [ProtoMember(2)]
         public string UserName { get; set; }
         /// <summary>
         /// 用于显示的名称
         /// </summary>
-        [ProtoMember(4)]
+        [ProtoMember(3)]
         public string DisplayName { get; set; }
-        /// <summary>
-        /// Email
-        /// </summary>
-        [ProtoMember(5)]
-        public string Email { get; set; }
-        /// <summary>
-        /// Mobile
-        /// </summary>
-        [ProtoMember(6)]
-        public string Mobile { get; set; }
-        /// <summary>
-        /// 用于显示的头像
-        /// </summary>
-        [ProtoMember(7)]
-        public string Avatar { get; set; }
+        [ProtoMember(4)]
+        public string UserInfo { get; set; }
+        
 
         /// <summary>
         /// 数据库分区字段
@@ -69,7 +56,7 @@ namespace Yanyitec.Runtime
         [ProtoMember(9)]
         public string ClientIp { get; set; }
         [ProtoMember(10)]
-        public IRuntimePermissions Permissions
+        public IAuthPermissions Permissions
         {
             get;set;
         }

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 using Yanyitec.Flow.Storage;
-using Yanyitec.Runtime;
+using Yanyitec.Auth;
 using Yanyitec.Flow.Defination;
 
 namespace Yanyitec.Flow
@@ -25,7 +25,7 @@ namespace Yanyitec.Flow
 
         public IDiagramRepository DiagramRepository { get; set; }
 
-        public override async Task<ActivityStates> ExecuteAsync(IRuntimeUser dealer)
+        public override async Task<ActivityStates> ExecuteAsync(IAuthUser dealer)
         {
             var todos = await this.InitTodoListAsync(dealer);
             while (todos.Count > 0) {
@@ -45,7 +45,7 @@ namespace Yanyitec.Flow
             return this.Status = ActivityStates.Dealing;
         }
 
-        async Task<Queue<Activity>> InitTodoListAsync(IRuntimeUser dealer) {
+        async Task<Queue<Activity>> InitTodoListAsync(IAuthUser dealer) {
             var dealingActivityEntities = await this.ActivityRepository.ListDealingByFlowIdAndDealerIdAsync(this.Id,dealer.UserId);
             var todos = new Queue<Activity>();
             foreach (var entity in dealingActivityEntities)
@@ -56,7 +56,7 @@ namespace Yanyitec.Flow
 
             return todos;
         }
-        async Task<ActivityStates> ExecuteActivityAsync(Activity activity, Queue<Activity> todos, IRuntimeUser dealer) {
+        async Task<ActivityStates> ExecuteActivityAsync(Activity activity, Queue<Activity> todos, IAuthUser dealer) {
             var result = await activity.ExecuteAsync(dealer);
             activity.Status = result;
             var entity = activity.UpdateEntity(dealer);
@@ -68,13 +68,13 @@ namespace Yanyitec.Flow
             if (result == ActivityStates.Finished) {
                 entity.FinishTime = DateTime.Now;
                 entity.FinishorId = dealer.UserId;
-                var rtUser = dealer as IRuntimeUser;
+                var rtUser = dealer as IAuthUser;
                 if (rtUser != null) {
                     entity.FinishedBy = rtUser.Factor.UserId;
                 } else {
                     entity.FinishedBy = dealer.UserId;
                 }
-                entity.FinishorInfo = dealer.ToJSON();
+                entity.FinishorInfo = dealer.UserInfo;
 
                 var nextNodes = activity.MakeNextNodes();
                 var nextActivityEntities = new List<ActivityEntity>();

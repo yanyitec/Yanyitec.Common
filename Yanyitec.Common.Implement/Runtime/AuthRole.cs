@@ -3,10 +3,10 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Yanyitec.Runtime
+namespace Yanyitec.Auth
 {
     [ProtoContract]
-    public class RuntimeRole
+    public class AuthRole
     {
         [ProtoMember(1)]
         public Guid Id { get; set; }
@@ -17,7 +17,7 @@ namespace Yanyitec.Runtime
         [ProtoMember(4)]
         public string DepartmentId { get; set; }
         [ProtoMember(5)]
-        public RuntimeRole InheritFrom { get; set; }
+        public AuthRole InheritFrom { get; set; }
         
 
     }

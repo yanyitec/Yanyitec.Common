@@ -7,6 +7,7 @@ namespace Yanyitec
 {
     public static class JObjectExtension
     {
+
         public static JToken MergeObject(this JObject self, JObject other)
         {
             if (other == null || other.Type == JTokenType.Undefined || other.Type == JTokenType.Null) return self == null ? new JObject() : self.DeepClone();

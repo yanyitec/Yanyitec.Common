@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using Yanyitec.Repo;
-using Yanyitec.Runtime;
+using Yanyitec.Auth;
 
 namespace Yanyitec.Biz
 {
@@ -13,8 +13,8 @@ namespace Yanyitec.Biz
         }
 
         public IAccessToken AccessToken { get; private set; }
-        public IRuntimeUser User { get { return this.AccessToken == null ? null : this.AccessToken.User; } }
-        public IRuntimePermission Permission { get { return this.AccessToken == null ? null : this.AccessToken.Permission; } }
+        public IAuthUser User { get { return this.AccessToken == null ? null : this.AccessToken.User; } }
+        public IAuthPermission Permission { get { return this.AccessToken == null ? null : this.AccessToken.Permission; } }
 
         public override string AllowedFields {
             get {

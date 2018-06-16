@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using Yanyitec.Runtime;
+using Yanyitec.Auth;
 
 namespace Yanyitec.Biz
 {
     public class AccessToken :IAccessToken
     {
-        public IRuntimeUser User { get; set; }
-        public IRuntimePermission Permission { get; set; }
+        public IAuthUser User { get; set; }
+        public IAuthPermission Permission { get; set; }
     }
 }

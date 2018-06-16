@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Yanyitec.Runtime
+namespace Yanyitec.Auth
 {
-    public interface IRuntimeUser :IUser
+    public interface IAuthUser :IUser
     {
         string Token { get;  }
         string ClientIp { get;  }
-        IRuntimePermissions Permissions { get; }
+        IAuthPermissions Permissions { get; }
         /// <summary>
         /// 代理人
         /// </summary>

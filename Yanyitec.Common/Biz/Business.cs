@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 using Yanyitec.Repo;
-using Yanyitec.Runtime;
+using Yanyitec.Auth;
 
 namespace Yanyitec.Biz
 {
